@@ -25,8 +25,8 @@ console.log('$PATH', spawnSync('printenv', {env}))
 
 Differences to [atom-community/environment](https://github.com/atom-community/environment): See [atom-linter#62](https://github.com/AtomLinter/atom-linter/issues/62)
 Differences to [sindresorhus/fix-path](https://github.com/sindresorhus/fix-path)
- - `fix-path` modifies globals which can result in significant lag due to sync spawns
- -  it also has duplication of work when multiple modules use it as there's no caching in place
+ - `fix-path` modifies globals
+ - `fix-path` has duplication of work when multiple modules use it as there's no caching in place
 
 #### LICENSE
 This project is licensed under the terms of MIT License
