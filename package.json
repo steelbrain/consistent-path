@@ -1,0 +1,29 @@
+{
+  "name": "consistent-path",
+  "version": "1.0.0",
+  "description": "A module to get correct $PATH on OSX that does not modify globals",
+  "main": "lib/index.js",
+  "dependencies": {
+    "babel-preset-steelbrain": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/steelbrain/consistent-env.git"
+  },
+  "keywords": [
+    "osx",
+    "path",
+    "$PATH",
+    "env"
+  ],
+  "author": "steelbrain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steelbrain/consistent-env/issues"
+  },
+  "homepage": "https://github.com/steelbrain/consistent-env#readme"
+}
