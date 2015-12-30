@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "A module to get correct $PATH on OSX that does not modify globals",
   "main": "lib/index.js",
-  "dependencies": {
+  "devDependencies": {
     "babel-preset-steelbrain": "^1.0.0"
   },
-  "devDependencies": {},
+  "dependencies": {
+    "shell-path": "^1.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
