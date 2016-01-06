@@ -1,6 +1,6 @@
 {
   "name": "consistent-path",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A module to get correct $PATH on OSX that does not modify globals",
   "main": "lib/index.js",
   "devDependencies": {
