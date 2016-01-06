@@ -1,6 +1,6 @@
 'use babel'
 
-import {sync} from 'shell-path'
+const LOCAL_BIN_PATH = '/usr/local/bin'
 
 export function getPath() {
   if (process.platform !== 'darwin') {
@@ -9,13 +9,17 @@ export function getPath() {
   if (global.__STEELBRAIN_CONSISTENT_PATH) {
     return global.__STEELBRAIN_CONSISTENT_PATH
   }
+  const shellPath = require('shell-path')
   // Line copied from https://github.com/sindresorhus/fix-path/blob/master/index.js
-  const path = sync() || [
+  let path = shellPath.sync() || [
       './node_modules/.bin',
       '/.nodebrew/current/bin',
-      '/usr/local/bin',
+      LOCAL_BIN_PATH,
       process.env.PATH
     ].join(':')
+  if (path.indexOf(LOCAL_BIN_PATH) === -1) {
+    path += ':' + LOCAL_BIN_PATH
+  }
   global.__STEELBRAIN_CONSISTENT_PATH = path
   return path
 }
