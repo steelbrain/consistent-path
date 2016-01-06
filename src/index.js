@@ -3,7 +3,7 @@
 import {sync} from 'shell-path'
 
 export function getPath() {
-  if (process.env !== 'darwin') {
+  if (process.platform !== 'darwin') {
     return process.env.PATH
   }
   if (global.__STEELBRAIN_CONSISTENT_PATH) {
