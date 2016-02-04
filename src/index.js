@@ -6,13 +6,12 @@ export function getPath() {
   if (process.platform !== 'darwin') {
     return process.env.PATH
   }
-  if (global.__STEELBRAIN_CONSISTENT_PATH) {
-    return global.__STEELBRAIN_CONSISTENT_PATH
+  if (global.__STEELBRAIN_CONSISTENT_PATH_V1_1) {
+    return global.__STEELBRAIN_CONSISTENT_PATH_V1_1
   }
-
   const path = findOutPath()
 
-  global.__STEELBRAIN_CONSISTENT_PATH = path
+  global.__STEELBRAIN_CONSISTENT_PATH_V1_1 = path
   return path
 }
 
