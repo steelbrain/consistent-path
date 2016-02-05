@@ -1,4 +1,4 @@
-#### 1.1.0
+#### 1.1.1
 
 - Merge with existing PATH instead of replacing
 
