@@ -23,7 +23,9 @@ console.log('$PATH', spawnSync('printenv', {env}))
 
 #### Differences to other packages
 
-Differences to [atom-community/environment](https://github.com/atom-community/environment): See [atom-linter#62](https://github.com/AtomLinter/atom-linter/issues/62)
+Differences to [atom-community/environment](https://github.com/atom-community/environment): 
+
+ - See [atom-linter#62](https://github.com/AtomLinter/atom-linter/issues/62)
 
 Differences to [sindresorhus/fix-path](https://github.com/sindresorhus/fix-path)
  - `fix-path` modifies globals
