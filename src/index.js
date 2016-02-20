@@ -1,35 +1,19 @@
 'use babel'
 
-const LOCAL_BIN_PATH = '/usr/local/bin'
+let consistentEnv
 
-export function getPath() {
-  if (process.platform !== 'darwin') {
-    return process.env.PATH
+module.exports = function() {
+  if (!consistentEnv) {
+    consistentEnv = require('consistent-env')
   }
-  if (global.__STEELBRAIN_CONSISTENT_PATH_V1_1) {
-    return global.__STEELBRAIN_CONSISTENT_PATH_V1_1
-  }
-  const path = findOutPath()
-
-  global.__STEELBRAIN_CONSISTENT_PATH_V1_1 = path
-  return path
+  return consistentEnv().PATH || ''
 }
 
-function findOutPath() {
-  const shellPath = require('shell-path')
-  const toReturn = []
-
-  const path = process.env.PATH.split(':').concat((shellPath.sync() || '').split(':'))
-  if (path.indexOf(LOCAL_BIN_PATH) === -1) {
-    path.push(LOCAL_BIN_PATH)
+module.exports.async = function() {
+  if (!consistentEnv) {
+    consistentEnv = require('consistent-env')
   }
-
-  for (let i = 0; i < path.length; ++i) {
-    const value = path[i]
-    if (value && toReturn.indexOf(value) === -1) {
-      toReturn.push(value)
-    }
-  }
-
-  return toReturn.join(':')
+  return consistentEnv.async().then(function(env) {
+    return env.PATH || ''
+  })
 }
