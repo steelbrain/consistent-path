@@ -1,3 +1,7 @@
+#### 2.0.1
+
+- Upgrade dependency to include a fix
+
 #### 2.0.0
 
 - Rewrite the package to include sync and async method
