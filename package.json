@@ -1,6 +1,6 @@
 {
   "name": "consistent-path",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A module to get correct $PATH on OSX",
   "main": "lib/index.js",
   "dependencies": {
