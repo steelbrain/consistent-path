@@ -1,3 +1,7 @@
+#### 2.0.2
+
+- Handle case insensitive PATH on windows correctly
+
 #### 2.0.1
 
 - Upgrade dependency to include a fix
