@@ -1,3 +1,7 @@
+#### 2.0.3
+
+- Bump `consistent-env` to include bugfixes
+
 #### 2.0.2
 
 - Handle case insensitive PATH on windows correctly
