@@ -1,6 +1,8 @@
 Consistent-PATH
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/steelbrain/consistent-path.svg)](https://greenkeeper.io/)
+
 `consistent-path` is an npm module that makes sure that you get the correct `$PATH` value even on GUI apps on OSX. It does not modify the globals and caches the result to avoid unnecessary work.
 
 #### API
